@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0fr9mxs" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
-  <bpmn:message id="Message_07yoxhu" name="Message_ConfirmacionLiquidacion" />
-  <bpmn:process id="execute-process" isExecutable="false">
+  <bpmn:process id="process" isExecutable="true">
     <bpmn:startEvent id="Event_00pov76">
       <bpmn:outgoing>Flow_1d76z19</bpmn:outgoing>
     </bpmn:startEvent>
@@ -16,14 +15,14 @@
     </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="execute-process">
-      <bpmndi:BPMNEdge id="Flow_1d76z19_di" bpmnElement="Flow_1d76z19">
-        <di:waypoint x="188" y="120" />
-        <di:waypoint x="260" y="120" />
-      </bpmndi:BPMNEdge>
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process">
       <bpmndi:BPMNEdge id="Flow_1rj3qk1_di" bpmnElement="Flow_1rj3qk1">
         <di:waypoint x="360" y="120" />
         <di:waypoint x="442" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d76z19_di" bpmnElement="Flow_1d76z19">
+        <di:waypoint x="188" y="120" />
+        <di:waypoint x="260" y="120" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_00pov76_di" bpmnElement="Event_00pov76">
         <dc:Bounds x="152" y="102" width="36" height="36" />

@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-
 @RestController
 @RequestMapping("/api/execute")
 public class ApiController {
@@ -29,8 +27,8 @@ public class ApiController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public ProcessKey execute() {
-        final ProcessInstance processInstance = runtimeService
-                .startProcessInstanceByKey("execute-process", new HashMap<>());
+        LOGGER.info("Executed called...");
+        final ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("process");
         return new ProcessKey(processInstance.getProcessInstanceId());
     }
 }
